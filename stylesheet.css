@@ -3,15 +3,7 @@
     text-align: center;
 }
 
-.grid-element {
-    border: 1px solid var(--border);
-    background-color: aqua;
-}
-
-.grid {
-    display: grid;
-    max-width: 500px;
-    min-height: 500px;
-    margin: 2rem auto;
-    border: 2px solid var(--border);
+.square {
+    background-color: green;
+    padding-top: 10px;
 }

@@ -1,6 +1,10 @@
 const container = document.getElementById("container");
+
+
 const title = document.getElementById("Title");
 title.style.color = "red";
+
+window.addEventListener("load", setDefaultGrid)
 
 function setDefaultGrid() {
     setGridSize(16);
@@ -13,11 +17,17 @@ function setGridSize() {
 
 function createGrid (gridSize) {
     let gridArea = gridSize * gridSize;
-    for (let i = 1; i < gridArea; i++) {
-        const matrix = document.createElement("div");
-        matrix.classList = "grid-element";
-        matrix.addEventListener("mouseover");
-        container.appendChild(matrix);
+    for (let i = 0; i < gridArea; i++) {
+        let matrix = document.createElement("div");
+        matrix.classList = "square";
+        let text = document.createElement("p");
+        matrix.appendChild(text);
+        matrix.addEventListener("mouseover", changeColor);
+        document.getElementById("container").appendChild(matrix);
     }
+}
+
+function changeColor (e) {
+    e.target.style.backgroundcolor = `black`
 }
 
