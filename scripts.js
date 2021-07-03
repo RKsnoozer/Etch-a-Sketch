@@ -1,18 +1,13 @@
 const container = document.getElementById("container");
 
+let size = 6;
 
-const title = document.getElementById("Title");
-title.style.color = "red";
-
-window.addEventListener("load", setDefaultGrid)
-
-function setDefaultGrid() {
-    setGridSize(4);
-    createGrid(4);
-}
+// Default Settings
+createGrid(size);
+setGridSize(size)
 
 function setGridSize(gridSize) {
-    container.style.gridTemplateColumns = `repeat(${gridSize}, auto)`; 
+    container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`; 
 }
 
 function createGrid (gridSize) {
@@ -28,4 +23,3 @@ function createGrid (gridSize) {
 function changeColor (e) {
     e.target.style.backgroundcolor = `black`
 }
-
