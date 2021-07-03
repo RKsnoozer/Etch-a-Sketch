@@ -1,9 +1,31 @@
+body {
+    background-color: aqua;
+}
+
 #Title {
     font-size: 60px;
     text-align: center;
 }
 
 .square {
-    background-color: green;
-    padding-top: 10px;
+    background-color: snow;
+    padding: 1px;
+    width: 200px;
+    height: 200px;
+}
+
+#container {
+    display: grid;
+    grid-gap: 5px;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+#container-wrapper {
+    background-color: rgb(180, 180, 180);
+    border: solid;
+    border-color: rgb(155, 155, 155);
+    width: fit-content;
+    margin: auto;
 }
