@@ -1,4 +1,4 @@
-const matrix = document.getElementById("")
+const matrix = document.getElementById("container")
 
 function createGrid (gridSize) {
     let gridArea = gridSize * gridSize;
