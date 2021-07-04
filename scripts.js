@@ -23,3 +23,10 @@ function createGrid (gridSize) {
 function changeColor (e) {
     e.target.style.backgroundColor = `black`
 }
+
+function clearScreen() {
+    const gridArray = Array.from(container.childNodes);
+    gridArray.forEach((element) => {
+        container.removeChild(element);
+    });
+}
