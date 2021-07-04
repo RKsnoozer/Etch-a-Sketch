@@ -1,10 +1,10 @@
 const container = document.getElementById("container");
 
-let size = 6;
+let size = 32;
 
 // Default Settings
 createGrid(size);
-setGridSize(size)
+setGridSize(size);
 
 function setGridSize(gridSize) {
     container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`; 
@@ -21,5 +21,5 @@ function createGrid (gridSize) {
 }
 
 function changeColor (e) {
-    e.target.style.backgroundcolor = `black`
+    e.target.style.backgroundColor = `black`
 }
