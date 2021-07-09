@@ -42,8 +42,6 @@ function changeGridSize() {
     size = prompt("Input Size")
     setGridSize(size);
     createGrid(size);
-
-
 }
 
 function clearScreen () {
@@ -51,4 +49,11 @@ function clearScreen () {
     girdArray.forEach((element) => {
         container.removeChild(element);
     });
+}
+
+function colorRGB() {
+    let R = Math.floor(Math.random() * 256);
+    let G = Math.floor(Math.random() * 256);  
+    let B = Math.floor(Math.random() * 256);
+    return colorRGB(R, G, B);
 }
