@@ -24,6 +24,7 @@ function changeColor (e) {
     e.target.style.backgroundColor = `black`
 }
 
+//does not work as intended
 function clearScreen() {
     const gridArray = Array.from(container.childNodes);
     gridArray.forEach((element) => {
