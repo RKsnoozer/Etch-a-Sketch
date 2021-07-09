@@ -30,6 +30,9 @@ function changeColor (e) {
 
 
 function clearScreen () {
-    const title = document.getElementById("Title");
-    title.style.color = "red";
+    const girdArray = Array.from(container.childNodes);
+    girdArray.forEach((element) => {
+        container.removeChild(element);
+    });
+    createGrid(size);
 }
