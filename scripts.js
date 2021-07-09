@@ -1,6 +1,9 @@
 const container = document.getElementById("container");
+const resetButton = document.getElementById("reset-button");
 
-let size = 32;
+resetButton.addEventListener("click", clearScreen);
+
+let size = 16;
 
 // Default Settings
 createGrid(size);
@@ -24,10 +27,9 @@ function changeColor (e) {
     e.target.style.backgroundColor = `black`
 }
 
-//does not work as intended
-function clearScreen() {
-    const gridArray = Array.from(container.childNodes);
-    gridArray.forEach((element) => {
-        container.removeChild(element);
-    });
+
+
+function clearScreen () {
+    const title = document.getElementById("Title");
+    title.style.color = "red";
 }
