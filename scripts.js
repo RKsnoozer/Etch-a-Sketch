@@ -1,9 +1,19 @@
 const container = document.getElementById("container");
 const resetButton = document.getElementById("reset-button");
+const changeSizeButton = document.getElementById("size-button");
 
-resetButton.addEventListener("click", clearScreen);
-
+// Default Size
 let size = 16;
+
+resetButton.addEventListener("click", () => {
+    clearScreen();
+    createGrid(size);
+});
+
+changeSizeButton.addEventListener("click", () => {
+    changeGridSize()
+});
+
 
 // Default Settings
 createGrid(size);
@@ -27,12 +37,18 @@ function changeColor (e) {
     e.target.style.backgroundColor = `black`
 }
 
+function changeGridSize() {
+    clearScreen();
+    size = prompt("Input Size")
+    setGridSize(size);
+    createGrid(size);
 
+
+}
 
 function clearScreen () {
     const girdArray = Array.from(container.childNodes);
     girdArray.forEach((element) => {
         container.removeChild(element);
     });
-    createGrid(size);
 }
