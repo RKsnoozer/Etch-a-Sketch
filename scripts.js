@@ -21,6 +21,7 @@ setGridSize(size);
 
 function setGridSize(gridSize) {
     container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`; 
+    container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 }
 
 function createGrid (gridSize) {
